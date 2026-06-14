@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <section class="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <!-- 섹션 제목 -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            우리의 팀을 소개합니다
+          </h2>
+          <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+            최고의 결과물을 만들기 위해 모인 열정적인 전문가들입니다.
+          </p>
+        </div>
+
+        <!-- 팀원 카드 그리드 (반응형) -->
+        <!-- 모바일: 1열, 태블릿(sm): 2열, 데스크톱(lg): 3열 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- 팀원 1 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 p-8 flex flex-col items-center text-center"
+          >
+            <img
+              class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-indigo-50"
+              src="images/9/ceo.png"
+              alt="홍길동 사진"
+            />
+            <h3 class="text-xl font-bold text-gray-900">홍길동</h3>
+            <p class="text-sm font-semibold text-indigo-600 mb-4">
+              CEO & Founder
+            </p>
+            <p class="text-gray-600 text-sm mb-6">
+              "혁신적인 아이디어로 세상을 바꾸는 것이 우리의 목표입니다."
+            </p>
+            <button
+              class="mt-auto px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+            >
+              프로필 보기
+            </button>
+          </div>
+
+          <!-- 팀원 2 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 p-8 flex flex-col items-center text-center"
+          >
+            <img
+              class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-indigo-50"
+              src="images/9/cto.png"
+              alt="김철수 사진"
+            />
+            <h3 class="text-xl font-bold text-gray-900">김철수</h3>
+            <p class="text-sm font-semibold text-indigo-600 mb-4">CTO</p>
+            <p class="text-gray-600 text-sm mb-6">
+              "안정적이고 확장 가능한 기술 아키텍처를 설계합니다."
+            </p>
+            <button
+              class="mt-auto px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+            >
+              프로필 보기
+            </button>
+          </div>
+
+          <!-- 팀원 3 -->
+          <div
+            class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 p-8 flex flex-col items-center text-center"
+          >
+            <img
+              class="w-32 h-32 rounded-full mb-4 object-cover border-4 border-indigo-50"
+              src="images/9/lead_designer.png"
+              alt="이영희 사진"
+            />
+            <h3 class="text-xl font-bold text-gray-900">이영희</h3>
+            <p class="text-sm font-semibold text-indigo-600 mb-4">
+              Lead Designer
+            </p>
+            <p class="text-gray-600 text-sm mb-6">
+              "사용자 중심의 직관적이고 아름다운 디자인을 만듭니다."
+            </p>
+            <button
+              class="mt-auto px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+            >
+              프로필 보기
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

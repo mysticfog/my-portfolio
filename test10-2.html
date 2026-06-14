@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 flex flex-col h-screen">
+    <header class="h-16 flex items-center justify-between px-6">
+      <!-- 로고 -->
+      <div class="z-30">
+        <img src="images/10/logo.svg" alt="로고" class="h-8" />
+      </div>
+      <div class="z-30">
+        <h1 class="text-xl font-bold">세종사이버대학교</h1>
+      </div>
+    </header>
+    <nav
+      class="w-full mx-auto p-6 bg-gray-800 text-white flex items-center justify-center"
+    >
+      <div
+        class="hidden items-center space-x-10 uppercase text-gray-300 md:flex"
+      >
+        <a
+          href="index.html"
+          class="tracking-widest text-gray-300 hover:text-red-500 transition-colors duration-150"
+          >Home</a
+        >
+        <a
+          href="test8-1.html"
+          data-src="test8-1.html"
+          class="tracking-widest text-gray-300 hover:text-red-500 transition-colors duration-150"
+          >개인명함</a
+        >
+        <a
+          href="test9-2.html"
+          data-src="test9-2.html"
+          class="tracking-widest text-gray-300 hover:text-red-500 transition-colors duration-150"
+          >팀소개</a
+        >
+        <a
+          href="test11-2.html"
+          data-src="test11-2.html"
+          class="tracking-widest text-gray-300 hover:text-red-500 transition-colors duration-150"
+          >갤러리</a
+        >
+        <a
+          href="test12-3.html"
+          data-src="test12-3.html"
+          class="tracking-widest text-gray-300 hover:text-red-500 transition-colors duration-150"
+          >로그인</a
+        >
+        <a
+          href="test12-2.html"
+          data-src="test12-2.html"
+          class="tracking-widest text-gray-300 hover:text-red-500 transition-colors duration-150"
+          >문의양식</a
+        >
+      </div>
+    </nav>
+    <main
+      class="flex-grow p-4 md:p-8 bg-gray-100 flex items-center justify-center"
+    >
+      <div
+        class="w-full max-w-6xl h-full bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200"
+      >
+        <iframe
+          id="contentFrame"
+          src="test8-1.html"
+          frameborder="0"
+          class="w-full h-full"
+        ></iframe>
+      </div>
+    </main>
+
+    <script>
+      (function () {
+        const frame = document.getElementById("contentFrame");
+        const links = document.querySelectorAll("nav a[data-src]");
+
+        function clearActive() {
+          links.forEach((l) => {
+            l.classList.remove("text-red-500");
+            l.classList.add("text-gray-300");
+          });
+        }
+
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const src = link.getAttribute("data-src");
+            frame.src = src;
+            clearActive();
+            link.classList.add("text-red-500");
+          });
+        });
+
+        // initialize first visible link as active
+        if (links.length) {
+          clearActive();
+          links[0].classList.add("text-red-500");
+        }
+      })();
+    </script>
+    <footer class="bg-gray-800 text-white text-center p-4 h-20">
+      2026 My Service. All rights reserved.
+    </footer>
+  </body>
+</html>

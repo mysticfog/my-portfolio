@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>푸른수목원 | 도심 속 자연의 쉼터</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div
+      class="bg-[url('images/14/forest.avif')] bg-cover bg-center bg-blend-overlay bg-black/50 relative"
+    >
+      <header class="absolute inset-x-0 top-0 z-50">
+        <nav
+          aria-label="Global"
+          class="flex items-center justify-between p-6 lg:px-8"
+        >
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              command="show-modal"
+              commandfor="mobile-menu"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200"
+            >
+              <span class="sr-only">메인 메뉴 열기</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6"
+              >
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a
+              href="#"
+              class="text-sm/6 font-semibold text-white hover:text-emerald-300 transition-colors"
+              >식물원 소개</a
+            >
+            <a
+              href="#"
+              class="text-sm/6 font-semibold text-white hover:text-emerald-300 transition-colors"
+              >관람 안내</a
+            >
+            <a
+              href="#"
+              class="text-sm/6 font-semibold text-white hover:text-emerald-300 transition-colors"
+              >테마 정원</a
+            >
+            <a
+              href="#"
+              class="text-sm/6 font-semibold text-white hover:text-emerald-300 transition-colors"
+              >프로그램 예약</a
+            >
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-4">
+            <a
+              href="#"
+              class="text-sm/6 font-semibold text-white hover:text-emerald-300 transition-colors"
+              >로그인 <span aria-hidden="true">&rarr;</span></a
+            >
+            <a
+              href="test10-2.html"
+              aria-label="실습 파일들 보기"
+              class="hidden lg:inline-flex rounded-md bg-emerald-600 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-emerald-500 to-emerald-700 hover:from-emerald-400 hover:to-emerald-600 shadow-xl ring-1 ring-white/10 transform transition-all duration-200 hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-emerald-300"
+              >실습 파일들 보기</a
+            >
+          </div>
+        </nav>
+        <el-dialog>
+          <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+            <div tabindex="0" class="fixed inset-0 focus:outline-none">
+              <el-dialog-panel
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-emerald-950 p-6 sm:max-w-sm sm:ring-1 sm:ring-white/10"
+              >
+                <div class="flex items-center justify-between">
+                  <a href="#" class="-m-1.5 p-1.5 text-xl font-bold text-white">
+                    <span class="sr-only">푸른수목원</span>
+                    🌿 푸른수목원
+                  </a>
+                  <button
+                    type="button"
+                    command="close"
+                    commandfor="mobile-menu"
+                    class="-m-2.5 rounded-md p-2.5 text-gray-200"
+                  >
+                    <span class="sr-only">메뉴 닫기</span>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      data-slot="icon"
+                      aria-hidden="true"
+                      class="size-6"
+                    >
+                      <path
+                        d="M6 18 18 6M6 6l12 12"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="mt-6 flow-root">
+                  <div class="-my-6 divide-y divide-white/10">
+                    <div class="space-y-2 py-6">
+                      <a
+                        href="#"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-emerald-800/50"
+                        >식물원 소개</a
+                      >
+                      <a
+                        href="#"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-emerald-800/50"
+                        >관람 안내</a
+                      >
+                      <a
+                        href="#"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-emerald-800/50"
+                        >테마 정원</a
+                      >
+                    <div class="py-6">
+                      <a
+                        href="#"
+                        class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-emerald-800/50"
+                        >로그인</a
+                      >
+                      <a
+                        href="test10-2.html"
+                        target="_blank"
+                        role="button"
+                        aria-label="실습 파일들 보기"
+                        class="-mx-3 mt-3 block w-full rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white bg-gradient-to-r from-emerald-500 to-emerald-700 hover:from-emerald-400 hover:to-emerald-600 shadow-xl ring-1 ring-white/10 transform transition-all duration-200 hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-emerald-300"
+                      >
+                        <span
+                          class="inline-flex items-center justify-center gap-3"
+                        >
+                          <svg
+                            class="w-5 h-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                            aria-hidden="true"
+                          >
+                            <path
+                              d="M12 5v14M5 12h14"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          실습 파일들 보기
+                        </span>
+                      </a>
+                    </div>
+                            />
+                          </svg>
+                          실습 파일들 보기
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </el-dialog-panel>
+            </div>
+          </dialog>
+        </el-dialog>
+      </header>
+
+      <div class="relative isolate px-6 pt-14 lg:px-8">
+        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div class="text-center">
+            <h1
+              class="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl drop-shadow-md"
+            >
+              자연이 숨 쉬는 곳,<br />도심 속 비밀 정원
+            </h1>
+            <p
+              class="mt-8 text-lg font-medium text-pretty text-gray-200 sm:text-xl/8 drop-shadow"
+            >
+              수천 종의 희귀 식물과 함께하는 힐링의 시간. 바쁜 일상에서 벗어나
+              사계절 내내 푸른 경이로운 생태계의 세계로 여러분을 초대합니다.
+            </p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a
+                href="#"
+                class="rounded-md bg-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-xs hover:bg-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 transition-colors"
+                >관람 예매하기</a
+              >
+              <a
+                href="#"
+                class="text-sm/6 font-semibold text-white hover:text-emerald-300 transition-colors"
+                >이용 안내 <span aria-hidden="true">→</span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] pointer-events-none"
+        >
+          <div
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+            class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-gradient-to-tr from-[#86efac] to-[#059669] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bento Grid Section -->
+    <div class="bg-[#f8faf8] py-24 sm:py-32">
+      <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <h2 class="text-center text-base/7 font-semibold text-emerald-600">
+          Explore Garden
+        </h2>
+        <p
+          class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl"
+        >
+          자연과 교감하는 특별한 경험
+        </p>
+        <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+          <!-- Item 1: 테마 정원 (좌측) -->
+          <div
+            class="group relative flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm border border-emerald-100/50 lg:row-span-2"
+          >
+            <div class="p-8 pb-4 z-10 bg-white">
+              <span
+                class="inline-flex items-center rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-semibold text-emerald-600 border border-emerald-200 mb-3"
+              >
+                야외 관람
+              </span>
+              <h3 class="text-xl font-bold tracking-tight text-gray-900">
+                사계절 테마 정원
+              </h3>
+              <p class="mt-2 text-sm/6 text-gray-600">
+                봄의 튤립부터 가을의 단풍까지, 계절마다 새롭게 옷을 갈아입는
+                12가지 다채로운 야외 정원을 거닐며 자연의 경이로움을 만끽해
+                보세요.
+              </p>
+            </div>
+            <div
+              class="relative w-full grow overflow-hidden min-h-[250px] sm:min-h-[300px]"
+            >
+              <!-- 텍스트와 이미지 사이의 자연스러운 연결을 위한 그라데이션 -->
+              <div
+                class="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"
+              ></div>
+              <img
+                src="images/14/garden.avif"
+                alt="테마 정원"
+                class="absolute inset-0 size-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+              />
+            </div>
+          </div>
+
+          <!-- Item 2: 온실 (중앙 상단) -->
+          <div
+            class="group relative flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm border border-emerald-100/50 max-lg:row-start-1"
+          >
+            <div class="p-8 pb-4 z-10 bg-white">
+              <span
+                class="inline-flex items-center rounded-full bg-teal-50 px-2.5 py-0.5 text-xs font-semibold text-teal-600 border border-teal-200 mb-3"
+              >
+                실내 전시
+              </span>
+              <h3 class="text-xl font-bold tracking-tight text-gray-900">
+                열대 대온실
+              </h3>
+              <p class="mt-2 text-sm/6 text-gray-600">
+                사계절 내내 푸른 빛을 머금은 웅장한 대온실에서 세계 각국의
+                이색적인 열대 식생을 관찰해 보세요.
+              </p>
+            </div>
+            <div class="relative w-full grow overflow-hidden min-h-[200px]">
+              <div
+                class="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"
+              ></div>
+              <img
+                src="images/14/greenhouse.avif"
+                alt="온실 내부"
+                class="absolute inset-0 size-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+              />
+            </div>
+          </div>
+
+          <!-- Item 3: 생태 체험 (중앙 하단) -->
+          <div
+            class="group relative flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm border border-emerald-100/50 lg:col-start-2 lg:row-start-2"
+          >
+            <div class="p-8 pb-4 z-10 bg-white">
+              <span
+                class="inline-flex items-center rounded-full bg-lime-50 px-2.5 py-0.5 text-xs font-semibold text-lime-600 border border-lime-200 mb-3"
+              >
+                체험 학습
+              </span>
+              <h3 class="text-xl font-bold tracking-tight text-gray-900">
+                생태 체험 프로그램
+              </h3>
+              <p class="mt-2 text-sm/6 text-gray-600">
+                전문가와 함께하는 숲 해설과 아이들의 호기심을 자극하는 생태 학습
+                클래스가 준비되어 있습니다.
+              </p>
+            </div>
+            <div class="relative w-full grow overflow-hidden min-h-[200px]">
+              <div
+                class="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"
+              ></div>
+              <img
+                src="images/14/eco-education.avif"
+                alt="생태 체험"
+                class="absolute inset-0 size-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+              />
+            </div>
+          </div>
+
+          <!-- Item 4: 숲길 (우측) -->
+          <div
+            class="group relative flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm border border-emerald-100/50 lg:row-span-2"
+          >
+            <div class="p-8 pb-4 z-10 bg-white">
+              <span
+                class="inline-flex items-center rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-semibold text-green-600 border border-green-200 mb-3"
+              >
+                휴식 공간
+              </span>
+              <h3 class="text-xl font-bold tracking-tight text-gray-900">
+                치유의 숲길
+              </h3>
+              <p class="mt-2 text-sm/6 text-gray-600">
+                바스락거리는 흙길을 걸으며 피톤치드를 온몸으로 느껴보세요.
+                울창한 숲 속에 숨겨진 자연 친화적인 카페가 여러분을 기다립니다.
+              </p>
+            </div>
+            <div
+              class="relative w-full grow overflow-hidden min-h-[250px] sm:min-h-[300px]"
+            >
+              <div
+                class="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-white to-transparent z-10 pointer-events-none"
+              ></div>
+              <img
+                src="images/14/forest-road.avif"
+                alt="숲길"
+                class="absolute inset-0 size-full object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Section -->
+    <div class="bg-emerald-900 py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="mx-auto lg:mx-0 text-center">
+          <h2
+            class="text-4xl font-semibold tracking-tight text-pretty text-white sm:text-5xl"
+          >
+            식물원 소식통
+          </h2>
+          <p class="mt-4 text-lg/8 text-emerald-100">
+            새롭게 피어난 꽃들과 생기 넘치는 수목원의 다채로운 행사 소식을
+            전해드립니다.
+          </p>
+        </div>
+        <div
+          class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-emerald-700/50 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+        >
+          <!-- Article 1 -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <img
+              src="images/14/tulip.avif"
+              alt="튤립 축제"
+              class="w-full h-64 rounded-2xl bg-gray-50 object-cover object-center mb-6 shadow-lg"
+            />
+            <div class="flex items-center gap-x-4 text-xs">
+              <time datetime="2026-04-01" class="text-emerald-200"
+                >2026. 04. 01</time
+              >
+              <a
+                href="#"
+                class="relative z-10 rounded-full bg-emerald-100 px-3 py-1.5 font-medium text-emerald-800 hover:bg-white transition-colors"
+                >축제/행사</a
+              >
+            </div>
+            <div class="group relative grow">
+              <h3
+                class="mt-3 text-xl font-bold text-white group-hover:text-emerald-200 transition-colors"
+              >
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  2026 봄맞이 특별 튤립 축제 개막
+                </a>
+              </h3>
+              <p class="mt-4 line-clamp-3 text-sm/6 text-emerald-100/80">
+                기다리던 봄을 맞아 무지갯빛 튤립 50만 송이가 식물원 광장을
+                화려하게 수놓습니다. 사랑하는 가족, 연인과 함께 향기로운 인생
+                사진을 남겨보세요.
+              </p>
+            </div>
+            <div class="relative mt-6 flex items-center gap-x-4">
+              <img
+                src="images/14/kim-jeong-won.png"
+                alt=""
+                class="size-10 rounded-full bg-gray-50"
+              />
+              <div class="text-sm/6">
+                <p class="font-semibold text-white">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    김정원 연구원
+                  </a>
+                </p>
+                <p class="text-emerald-300">식물관리본부 / 화훼팀</p>
+              </div>
+            </div>
+          </article>
+          <!-- Article 2 -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <img
+              src="images/14/home-gardening.avif"
+              alt="홈 가드닝"
+              class="w-full h-64 rounded-2xl bg-gray-50 object-cover object-center mb-6 shadow-lg"
+            />
+            <div class="flex items-center gap-x-4 text-xs">
+              <time datetime="2026-03-20" class="text-emerald-200"
+                >2026. 03. 20</time
+              >
+              <a
+                href="#"
+                class="relative z-10 rounded-full bg-emerald-100 px-3 py-1.5 font-medium text-emerald-800 hover:bg-white transition-colors"
+                >교육/강좌</a
+              >
+            </div>
+            <div class="group relative grow">
+              <h3
+                class="mt-3 text-xl font-bold text-white group-hover:text-emerald-200 transition-colors"
+              >
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  초보자를 위한 '홈 가드닝' 클래스 모집
+                </a>
+              </h3>
+              <p class="mt-4 line-clamp-3 text-sm/6 text-emerald-100/80">
+                집에서도 누구나 쉽게 식물을 기를 수 있습니다! 흙 배합부터
+                분갈이, 물 주기 요령까지 식물 집사가 되기 위한 모든 기초 지식을
+                전수해 드립니다.
+              </p>
+            </div>
+            <div class="relative mt-6 flex items-center gap-x-4">
+              <img
+                src="images/14/lee-su-min.png"
+                alt=""
+                class="size-10 rounded-full bg-gray-50"
+              />
+              <div class="text-sm/6">
+                <p class="font-semibold text-white">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    이수민 강사
+                  </a>
+                </p>
+                <p class="text-emerald-300">생태교육팀장</p>
+              </div>
+            </div>
+          </article>
+          <!-- Article 3 -->
+          <article class="flex max-w-xl flex-col items-start justify-between">
+            <img
+              src="images/14/monstera.avif"
+              alt="몬스테라"
+              class="w-full h-64 rounded-2xl bg-gray-50 object-cover object-center mb-6 shadow-lg"
+            />
+            <div class="flex items-center gap-x-4 text-xs">
+              <time datetime="2026-03-05" class="text-emerald-200"
+                >2026. 03. 05</time
+              >
+              <a
+                href="#"
+                class="relative z-10 rounded-full bg-emerald-100 px-3 py-1.5 font-medium text-emerald-800 hover:bg-white transition-colors"
+                >식물 정보</a
+              >
+            </div>
+            <div class="group relative grow">
+              <h3
+                class="mt-3 text-xl font-bold text-white group-hover:text-emerald-200 transition-colors"
+              >
+                <a href="#">
+                  <span class="absolute inset-0"></span>
+                  이달의 추천 식물: 매력적인 잎맥, 몬스테라
+                </a>
+              </h3>
+              <p class="mt-4 line-clamp-3 text-sm/6 text-emerald-100/80">
+                특유의 찢어진 잎이 매력적인 열대 관엽식물 몬스테라. 인테리어
+                효과뿐만 아니라 공기 정화 능력까지 탁월한 이 식물의 흥미로운
+                생태를 알아봅니다.
+              </p>
+            </div>
+            <div class="relative mt-6 flex items-center gap-x-4">
+              <img
+                src="images/14/park-jae-song.png"
+                alt=""
+                class="size-10 rounded-full bg-gray-50"
+              />
+              <div class="text-sm/6">
+                <p class="font-semibold text-white">
+                  <a href="#">
+                    <span class="absolute inset-0"></span>
+                    박재송 연구원
+                  </a>
+                </p>
+                <p class="text-emerald-300">열대식물 연구소</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats & Footer Section -->
+    <div class="relative isolate overflow-hidden bg-emerald-950 py-24 sm:py-32">
+      <!-- Decorative background blur -->
+      <div
+        class="absolute -top-24 -left-24 -z-10 transform-gpu blur-3xl"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-1155/678 w-[72.1875rem] bg-gradient-to-tr from-[#10b981] to-[#047857] opacity-20"
+          style="
+            clip-path: polygon(
+              74.1% 44.1%,
+              100% 61.6%,
+              97.5% 26.9%,
+              85.5% 0.1%,
+              80.7% 2%,
+              72.5% 32.5%,
+              60.2% 62.4%,
+              52.4% 68.1%,
+              47.5% 58.3%,
+              45.2% 34.5%,
+              27.5% 76.7%,
+              0.1% 64.9%,
+              17.9% 100%,
+              27.6% 76.8%,
+              76.1% 97.7%,
+              74.1% 44.1%
+            );
+          "
+        ></div>
+      </div>
+      <div class="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+        <div class="mx-auto max-w-2xl lg:mx-0">
+          <h2
+            class="text-4xl font-semibold tracking-tight text-white sm:text-6xl"
+          >
+            자연과 함께하는 삶
+          </h2>
+          <p
+            class="mt-8 text-lg font-medium text-pretty text-emerald-200 sm:text-xl/8"
+          >
+            푸른수목원은 식물 유전자원 보존과 도심 속 생태계 복원을 위해
+            끊임없이 노력하고 있습니다. 우리가 지켜가는 초록빛 미래에 함께해
+            주세요.
+          </p>
+        </div>
+        <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+          <div
+            class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10"
+          >
+            <a href="#" class="hover:text-emerald-300 transition-colors"
+              >후원하기 <span aria-hidden="true">&rarr;</span></a
+            >
+            <a href="#" class="hover:text-emerald-300 transition-colors"
+              >자원봉사 신청 <span aria-hidden="true">&rarr;</span></a
+            >
+            <a href="#" class="hover:text-emerald-300 transition-colors"
+              >지속가능성 보고서 <span aria-hidden="true">&rarr;</span></a
+            >
+            <a href="#" class="hover:text-emerald-300 transition-colors"
+              >연구진 소개 <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+          <dl
+            class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4 border-t border-emerald-800 pt-10"
+          >
+            <div class="flex flex-col-reverse gap-1">
+              <dt class="text-base/7 text-emerald-300">보유 식물 종수</dt>
+              <dd class="text-4xl font-bold tracking-tight text-white">
+                5,200+
+              </dd>
+            </div>
+            <div class="flex flex-col-reverse gap-1">
+              <dt class="text-base/7 text-emerald-300">연간 방문객 수</dt>
+              <dd class="text-4xl font-bold tracking-tight text-white">
+                120만+
+              </dd>
+            </div>
+            <div class="flex flex-col-reverse gap-1">
+              <dt class="text-base/7 text-emerald-300">월간 생태 교육</dt>
+              <dd class="text-4xl font-bold tracking-tight text-white">40+</dd>
+            </div>
+            <div class="flex flex-col-reverse gap-1">
+              <dt class="text-base/7 text-emerald-300">
+                보존 중인 희귀/멸종위기종
+              </dt>
+              <dd class="text-4xl font-bold tracking-tight text-white">150+</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
